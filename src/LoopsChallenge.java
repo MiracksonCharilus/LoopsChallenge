@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 public class LoopsChallenge {
 
@@ -32,10 +33,11 @@ public class LoopsChallenge {
         System.out.println("Question 2: ");
         int numQ2 = 5;
         numQ2 = numQ2 + 1;
-        do{
+        do {
             numQ2 = numQ2 + 2;
-        System.out.println(numQ2);}
-        while (numQ2 < 13) ;
+            System.out.println(numQ2);
+        }
+        while (numQ2 < 13);
     }
 
     public static void question3() {
@@ -47,14 +49,13 @@ public class LoopsChallenge {
             userInputQ3 = keyboard.nextInt();
             keyboard.nextLine();
         }
-        while(userInputQ3 < 3 || userInputQ3 > 7);
-        }
+        while (userInputQ3 < 3 || userInputQ3 > 7);
+    }
 
     public static void question4() {
         System.out.println("Question4: ");
 
-        for (int Q4i = 1; Q4i <= 12; ++Q4i)
-        {
+        for (int Q4i = 1; Q4i <= 12; ++Q4i) {
             System.out.println(Q4i * 5);
         }
     }
@@ -98,13 +99,14 @@ public class LoopsChallenge {
         int Q8i;
         int numQ8 = 0;
         for (Q8i = userInputQ8; Q8i >= 0; Q8i -= 3) {
-            numQ8 = Q8i;}
-        if (numQ8 == 0){
-            System.out.println("The number " + userInputQ8 + " is divisible" );}
-        else {
-            System.out.println("The number " + userInputQ8 + " is NOT divisible" );}
+            numQ8 = Q8i;
         }
-
+        if (numQ8 == 0) {
+            System.out.println("The number " + userInputQ8 + " is divisible");
+        } else {
+            System.out.println("The number " + userInputQ8 + " is NOT divisible");
+        }
+    }
 
 
     public static void question9() {
@@ -130,12 +132,11 @@ public class LoopsChallenge {
         Scanner keyboard = new Scanner(System.in);
         String favPet = keyboard.nextLine();
         if (!(favPet.equalsIgnoreCase("dog") ||
-        favPet.equalsIgnoreCase("cat") ||
-        favPet.equalsIgnoreCase("bird") ||
-                favPet.equalsIgnoreCase("fish")) ){
+                favPet.equalsIgnoreCase("cat") ||
+                favPet.equalsIgnoreCase("bird") ||
+                favPet.equalsIgnoreCase("fish"))) {
             System.out.println("Valid : " + favPet);
-        }
-        else {
+        } else {
             System.out.println("Invalid : " + favPet);
         }
     }
@@ -152,7 +153,7 @@ public class LoopsChallenge {
         String newStr = "";
         for (int i = 0; i < userInput.length(); ++i) {
             userChar = userInput.charAt(i);
-            charAscii = (int)userChar + 3;
+            charAscii = (int) userChar + 3;
             charStr = Character.toString(charAscii);
 
             newStr += charStr;
@@ -163,11 +164,31 @@ public class LoopsChallenge {
 
     public static void question11() {
         System.out.println("Question 11: ");
-
+    String q11Word = "dog";
+    String letter;
+        for (int iQ11 = 0; iQ11 < q11Word.length(); iQ11++) {
+            letter = q11Word.substring(iQ11, iQ11+1);
+            System.out.print(letter.toUpperCase());
+        }
     }
 
     public static void question12() {
-        System.out.println("Question 12: ");
+        System.out.println( "\nQuestion 12: ");
+        String q12Word1 = "bird";
+        String q12Word2 = "birdy";
+        int counter = 0;
+        if (q12Word1.length() == q12Word2.length()) {
+            for (int iQ12 = 0; iQ12 < q12Word1.length(); iQ12++) {
+                if (q12Word1.charAt(iQ12) == q12Word2.charAt(iQ12)) {
+                    counter++;
+                }
+            } if (counter == q12Word1.length()) {
+                System.out.println("The words are equal");
+            }
 
+        } else {
+            System.out.println("Words are different");
+
+        }
     }
 }
